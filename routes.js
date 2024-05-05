@@ -4,7 +4,7 @@ const User = require('./userModel');
 const questions = require('./questions')
 
 
-router.get('/questions', (req, res) => {
+router.get('/', (req, res) => {
     res.json(questions)
 });
 
