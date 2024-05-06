@@ -3,7 +3,7 @@ const connectDB = require('./dataBase');
 const bodyParser = require('body-parser');
 const cors = require('cors')
 const User = require('./userModel');
-const questions = require('./questions')
+
 
 
 
@@ -14,7 +14,7 @@ app.use(cors())
 connectDB()
 
 app.get('/', (req, res) => {
-    res.json(questions)
+res.send('Servern är igång!')
 });
 
 app.post('/userResult', async (req, res) => {

@@ -1,0 +1,18 @@
+### Hämta alla frågor ###
+GET https://quizbackend-9soc.onrender.com/
+
+### Skicka svar för att uppdatera användarens resultat ###
+POST https://quizbackend-9soc.onrender.com/userResult
+Content-Type: application/json
+
+{
+  "username": "användarnamn",
+  "answers": [
+    {"questionId": 1, "isCorrect": true},
+    {"questionId": 2, "isCorrect": false},
+    // Fyll i med svar för varje fråga
+  ]
+}
+
+### Hämta de fem användare med högsta poängen ###
+GET https://quizbackend-9soc.onrender.com/highestScores
