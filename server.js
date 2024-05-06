@@ -45,7 +45,7 @@ app.post('/userResult', async (req, res) => {
 app.get('/highestScores', async (req, res) => {
     try {
         
-        const highestScorers = await User.find({}).sort({ score: -1 }).limit(5);
+        const highestScorers = await User.find({}).sort({ score: -1 }).limit(10);
 
         res.status(200).json(highestScorers);
     } catch (error) {
